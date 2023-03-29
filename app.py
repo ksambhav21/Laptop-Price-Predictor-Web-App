@@ -1,11 +1,12 @@
 import streamlit as st
+import pandas as pd
 import pickle
 import numpy as np
 import sklearn
 
 # import the model
-pipe = pickle.load(open('pipe1.pkl','rb'))
-df = pickle.load(open('df.pkl','rb'))
+pipe = pd.read_pickle(open('pipe1.pkl','rb'))
+df = pd.read_pickle(open('df.pkl','rb'))
 
 st.title("Laptop Predictor")
 
